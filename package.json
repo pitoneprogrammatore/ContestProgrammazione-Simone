@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/simonegosetto/document-analyzer#readme",
   "dependencies": {
-    "keras-js": "^1.0.3",
+    "@jimp/plugin-threshold": "^0.16.1",
+    "canvas": "^2.7.0",
+    "face-api.js": "^0.22.2",
+    "jimp": "^0.16.1",
     "scriptjs": "^2.5.9",
     "tesseract.js": "^2.1.4"
   }
