@@ -1,0 +1,24 @@
+{
+  "name": "document-analyzer",
+  "version": "1.0.0",
+  "description": "Analizzatore Documenti (ITA) creato per il contest https://www.youtube.com/watch?v=CMhOUoeIzyQ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonegosetto/document-analyzer.git"
+  },
+  "author": "Simone Gosetto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simonegosetto/document-analyzer/issues"
+  },
+  "homepage": "https://github.com/simonegosetto/document-analyzer#readme",
+  "dependencies": {
+    "keras-js": "^1.0.3",
+    "scriptjs": "^2.5.9",
+    "tesseract.js": "^2.1.4"
+  }
+}
