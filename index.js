@@ -39,9 +39,9 @@ const processFaceAPI = async () => {
 jimp.read(fileToRead, (err, img) => {
     if (err) throw err;
     if (img.bitmap.width > 2000 || img.bitmap.height > 2000) {
-        img.resize(1000, jimp.AUTO).threshold({ max: 200 }).write(fileToProcess);
+        img.resize(1000, jimp.AUTO).write(fileToProcess);
     } else {
-        img.threshold({ max: 200 }).write(fileToProcess);
+        img.write(fileToProcess);
     }
     _init();
 });
