@@ -6,7 +6,7 @@ const {Canvas, Image, ImageData} = canvas;
 faceapi.env.monkeyPatch({Canvas, Image, ImageData});
 const tesseract = require('tesseract.js');
 const tesseractWorker = tesseract.createWorker();
-const fileToRead = 'https://www.sprintcasalgrande.it/images/contenuti/articoli/rinnovo-patente-a-casalgrande-di-reggio-emilia_PATENTELusoli_pellegrino.jpg';
+const fileToRead = 'https://www.fake-id.com/uploads/product/buy-fake-international-boater-license-front.jpg';
 const fileToProcess = 'processed.jpg';
 let documentText, faceData;
 const log = (title, text) => console.log(`@@@@@@@@@@@@ - ${title} - @@@@@@@@@@@@\n${text}\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n`)

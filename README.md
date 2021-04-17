@@ -17,7 +17,7 @@ npm install
 Cambiare il valore della costante `fileToRead` con l'URL o la path locale del file che vogliamo analizzare, di seguito 2 esempi:
 
 ```js
-const fileToRead = 'https://www.bitmat.it/wp-content/uploads/2018/12/carta_identit%C3%A0_elettronica-696x391.jpg';
+const fileToRead = 'https://www.fake-id.com/uploads/product/buy-fake-international-boater-license-front.jpg';
 ```
 ```js
 const fileToRead = './patente.jpg';
