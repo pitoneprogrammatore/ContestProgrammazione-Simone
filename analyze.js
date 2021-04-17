@@ -6,10 +6,10 @@ const {Canvas, Image, ImageData} = canvas;
 faceapi.env.monkeyPatch({Canvas, Image, ImageData});
 const tesseract = require('tesseract.js');
 const tesseractWorker = tesseract.createWorker();
-const fileToRead = 'https://www.bitmat.it/wp-content/uploads/2018/12/carta_identit%C3%A0_elettronica-696x391.jpg';
+const fileToRead = 'https://www.sprintcasalgrande.it/images/contenuti/articoli/rinnovo-patente-a-casalgrande-di-reggio-emilia_PATENTELusoli_pellegrino.jpg';
 const fileToProcess = 'processed.jpg';
 let documentText, faceData;
-const log = (text) => console.log(`@@@@@@@@@@@@ ${text} @@@@@@@@@@@@`)
+const log = (title, text) => console.log(`@@@@@@@@@@@@ - ${title} - @@@@@@@@@@@@\n${text}\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\n`)
 const _init = async () => {
     // Inizializzazione OCR e FaceAPI
     await tesseractWorker.load();
@@ -22,8 +22,8 @@ const _init = async () => {
     documentText = await processOCR();
     faceData = await processFaceAPI();
     // Stampa risultato
-    console.log(`${documentText.toLowerCase().indexOf('paten') > -1 ? log('PATENTE') : documentText.toLowerCase().indexOf('pass') > -1 ? log('PASSAPORTO') : ''}\n${documentText}`);
-    console.log(parseInt(faceData.age), faceData.gender);
+    log(`       OCR       `,`\n${documentText}`);
+    log(`Face Recognition`,`\nEtà: ${parseInt(faceData?.age).toString()} - Sesso: ${faceData?.gender}\n`);
     process.exit(1);
 }
 
@@ -36,8 +36,7 @@ const processOCR = async () => {
 const processFaceAPI = async () => {
     const img = await canvas.loadImage(fileToProcess);
     const faceDetectionOptions = new faceapi.SsdMobilenetv1Options({minConfidence: 0.5}); // getFaceDetectorOptions(faceDetectionNet);
-    const face = await faceapi.detectSingleFace(img, faceDetectionOptions).withFaceLandmarks().withAgeAndGender();
-    return face;
+    return {...await faceapi.detectSingleFace(img, faceDetectionOptions).withFaceLandmarks().withAgeAndGender()};
 }
 
 jimp.read(fileToRead, (err, img) => {

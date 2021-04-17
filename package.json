@@ -2,7 +2,7 @@
   "name": "document-analyzer",
   "version": "1.0.0",
   "description": "Analizzatore Documenti (ITA) creato per il contest https://www.youtube.com/watch?v=CMhOUoeIzyQ",
-  "main": "index.js",
+  "main": "analyze.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
