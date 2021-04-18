@@ -27,6 +27,29 @@ ed infine lanciare il comando
 node analyze.js
 ```
 
+esempio di output:
+```console
+@@@@@@@@@@@@ -        OCR        - @@@@@@@@@@@@
+
+INTERNATIONAL BOATER [
+A) JASMINE
+k AL DEEN
+A = 21121994 AGRABAH
+ì ARABIC
+14.10.2024
+NPT PP PP PP P PP ZPPO RIA
+ELT OLIT TIZZI IE PL PP PPPPPPPIPPPPIPPDI
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+```
+```console
+@@@@@@@@@@@@ - Face Recognition - @@@@@@@@@@@@
+
+Età: 19 - Sesso: female
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+```
+
 ## Riflessione
 Ho scritto questo codice per cercare di trasmettere la mia idea di programmazione.<br><br>
 Oggi giorno abbiamo librerie Open Source che ci sonsentono di fare qualsiasi cosa con poche righe di codice e si possono adattare ad ogni caso d'uso.<br><br>
