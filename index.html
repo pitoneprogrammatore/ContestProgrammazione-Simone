@@ -9,7 +9,7 @@
 </head>
 <body class="text-center m-5">
 <div id="container">
-    <input id="uploader" type="file" class="form-control m-5">
+    <input id="uploader" type="file" accept="image/*" class="form-control m-5">
     <div class="card m-5 text-center" style="display: none">
         <img class="card-img-top" style="width: 500px !important;">
         <div class="card-body">
@@ -31,7 +31,6 @@
         reader.readAsDataURL(files[0]);
         // La processo con il Face Recognition
         document.querySelector('.card-subtitle').innerHTML = '<div class="spinner-grow text-success" role="status"></div>';
-        // Inizializzo Face Detection
         await faceapi.nets.ssdMobilenetv1.load('models');
         await faceapi.loadFaceLandmarkModel('models');
         await faceapi.nets.ageGenderNet.load('models');

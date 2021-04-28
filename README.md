@@ -1,12 +1,13 @@
-# Analizzatore Documenti 
+# Analizzatore Documenti in formato immagine
 
 > Codice Javascript fatto per:
 > - trasformare l'immagine di un documento in testo tramite [Tesseract OCR](https://tesseract.projectnaptha.com/)
 > - analizzare l'eventuale foto del documento stesso facendo un Face Recognition per riconoscere Genere ed Età della persona tramite [face-api.js](https://justadudewhohacks.github.io/face-api.js/docs/index.html)
+> > Ho importato [Bootstrap](https://getbootstrap.com/) solo per avere un minino di classi CSS da poter usare.
 
 ## Utilizzo
 La pagina index.html deve essere aperta da un qualsiasi Web Server.
-Una volta aperta la pagina possiamo caricare il documento che vogliamo analizzare (documento di testo generico, documento d'identità o altro, vedi "example.jpg") e lo script partità in automatico.
+Una volta aperta la pagina possiamo caricare il documento che vogliamo analizzare (documento di testo generico, documento d'identità o altro, vedi "image/example.jpg" e "image/lorem.png") e lo script partità in automatico.
 
 ## Riflessione
 Ho scritto questo codice per cercare di comunicare la mia idea di programmazione.<br><br>
