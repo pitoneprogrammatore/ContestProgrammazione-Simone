@@ -15,9 +15,9 @@ const _init = async () => {
     await tesseractWorker.load();
     await tesseractWorker.loadLanguage('ita');
     await tesseractWorker.initialize('ita');
-    await faceDetectionNet.loadFromDisk('models');
-    await faceapi.nets.faceLandmark68Net.loadFromDisk('models');
-    await faceapi.nets.ageGenderNet.loadFromDisk('models');
+    await faceDetectionNet.loadFromDisk('../models');
+    await faceapi.nets.faceLandmark68Net.loadFromDisk('../models');
+    await faceapi.nets.ageGenderNet.loadFromDisk('../models');
     // Elaborazione
     documentText = await processOCR();
     faceData = await processFaceAPI();
